@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Weather Dashboard</h1>
+        <div class="search-container">
+          <input type="text" id="city-search" placeholder="Enter city name" />
+          <button id="search-btn">Search</button>
+          <button id="location-btn">Use My Location</button>
+        </div>
+        <div id="recent-searches"></div>
+      </header>
+
+      <main>
+        <section id="current-weather">
+          <div class="weather-card">
+            <h2 id="city-name">Select a City</h2>
+            <div class="temperature-toggle">
+              <button id="celsius-btn">°C</button>
+              <button id="fahrenheit-btn">°F</button>
+            </div>
+            <div id="current-conditions">
+              <img id="weather-icon" src="" alt="Weather Icon" />
+              <div class="temp-info">
+                <p id="current-temp">-</p>
+                <p id="weather-description">-</p>
+              </div>
+              <div class="additional-info">
+                <p>Humidity: <span id="humidity">-</span>%</p>
+                <p>Wind: <span id="wind-speed">-</span> km/h</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="forecast">
+          <h3>5-Day Forecast</h3>
+          <div id="forecast-container" class="forecast-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="error-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <p id="error-message"></p>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
